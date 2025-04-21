@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. Muzafar Soomro</title>
-  <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
@@ -20,6 +20,15 @@
       color: white;
       padding: 2rem;
       text-align: center;
+    }
+    .theme-toggle {
+      background: white;
+      color: #2a5298;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-top: 1rem;
     }
     .profile {
       display: flex;
@@ -73,18 +82,61 @@
     a {
       color: white;
     }
+
+    /* Dark Mode */
+    .dark-mode {
+      background-color: #1e1e2f;
+      color: #f0f0f0;
+    }
+    .dark-mode header {
+      background: linear-gradient(to right, #000428, #004e92);
+    }
+    .dark-mode .bubble {
+      background: #004e92;
+    }
+    .dark-mode footer {
+      background: #000428;
+    }
+    .dark-mode a {
+      color: #f0f0f0;
+    }
+    .dark-mode .theme-toggle {
+      background: #333;
+      color: #f0f0f0;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 600px) {
+      .interests {
+        flex-direction: column;
+      }
+      .gallery img {
+        width: 100%;
+      }
+      .profile img {
+        width: 120px;
+        height: 120px;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Dr. Muzafar Soomro</h1>
     <p>Internal Medicine Enthusiast | Self-Reflective Learner | Cricket Fan</p>
-  </header>  <div class="profile">
+    <button class="theme-toggle" id="themeToggle">Toggle Theme</button>
+  </header>
+
+  <div class="profile">
     <img src="profile.jpg" alt="Dr. Muzafar's Profile Picture">
-  </div>  <section>
+  </div>
+
+  <section>
     <h2 class="section-title">About Me</h2>
-    <p>I graduated in 2025 from Chandka Medical College - SMBBMU, Larkana. I'm passionate about medicine, curious about digital design and AI, and continuously seek personal and professional growth through self-reflection and learning.</p>
-  </section>  <section>
+    <p>I graduated in 2025 from Chandka Medical College - SMBBMU, Larkana. I'm passionate about internal medicine, digital design, and AI. My goal is to inspire, share medical knowledge, and grow as a person through constant reflection and learning.</p>
+  </section>
+
+  <section>
     <h2 class="section-title">My Interests</h2>
     <div class="interests">
       <div class="bubble">
@@ -97,10 +149,22 @@
       </div>
       <div class="bubble">
         <strong>Self-Reflection</strong>
-        <p>I'm deeply invested in understanding the self, personal growth, and removing internal illusions.</p>
+        <p>Deeply invested in understanding the self, personal growth, and removing internal illusions.</p>
       </div>
     </div>
-  </section>  <section>
+  </section>
+
+  <section>
+    <h2 class="section-title">Blog</h2>
+    <p>Three sections will appear here soon:</p>
+    <ul>
+      <li>Health Blogs</li>
+      <li>Study-Related Blogs</li>
+      <li>Personal Growth & Productivity Blogs</li>
+    </ul>
+  </section>
+
+  <section>
     <h2 class="section-title">Gallery</h2>
     <div class="gallery">
       <img src="collage1.jpg" alt="College Photo 1">
@@ -109,15 +173,25 @@
       <img src="studytable.jpg" alt="Study Table">
       <img src="nature.jpg" alt="Calm Nature">
     </div>
-  </section>  <section>
+  </section>
+
+  <section>
     <h2 class="section-title">Contact</h2>
     <p>Email: <a href="mailto:farazmuzafar786@gmail.com">farazmuzafar786@gmail.com</a></p>
     <p><a href="https://www.linkedin.com/in/muzafar-soomro-b66252308">LinkedIn</a></p>
     <p><a href="https://www.instagram.com/farazmuzafar">Instagram</a></p>
     <p><a href="https://www.facebook.com/share/16TYpfxWe2/">Facebook</a></p>
     <p><a href="https://x.com/muzafar_faraz">Twitter</a></p>
-  </section>  <footer>
+  </section>
+
+  <footer>
     <p>&copy; 2025 Dr. Muzafar Soomro. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.getElementById('themeToggle').addEventListener('click', function () {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
 </body>
 </html>
