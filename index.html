@@ -4,116 +4,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. Muzafar Soomro</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
     body {
-      background-color: #f0f2f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f5f7fa;
       color: #333;
     }
     header {
-      background: linear-gradient(135deg, #0077b6, #00b4d8);
-      padding: 40px 20px;
-      text-align: center;
+      background: linear-gradient(to right, #2b5876, #4e4376);
       color: white;
+      text-align: center;
+      padding: 2rem 1rem;
     }
     header img {
-      width: 130px;
-      height: 130px;
+      width: 140px;
+      height: 140px;
       object-fit: cover;
       border-radius: 50%;
       border: 4px solid white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 1rem 0 0.2rem;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0.2rem 0 0;
     }
     section {
-      padding: 50px 20px;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 900px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
-    .about {
-      background-color: #e0f7fa;
+    section h2 {
+      border-left: 6px solid #4e4376;
+      padding-left: 1rem;
+      color: #4e4376;
+      margin-bottom: 1rem;
     }
-    .interests {
-      background-color: #fce4ec;
+    .bubble-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
-    .digital {
-      background-color: #f3e5f5;
-    }
-    .gallery {
-      background-color: #e8f5e9;
-    }
-    .contact {
-      background-color: #fff3e0;
-    }
-    h2 {
-      margin-bottom: 20px;
-      text-align: center;
+    .bubble {
+      background: #e0e7ff;
+      padding: 1rem 1.5rem;
+      border-radius: 2rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      font-weight: 500;
     }
     .carousel {
       display: flex;
-      overflow-x: scroll;
+      overflow-x: auto;
       scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
+      gap: 1rem;
     }
     .carousel img {
-      scroll-snap-align: start;
-      flex: none;
+      scroll-snap-align: center;
       width: 100%;
-      max-width: 400px;
-      margin: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      max-width: 300px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    .carousel::-webkit-scrollbar {
-      display: none;
-    }
-    .contact a {
+    .contact-links a {
       display: block;
-      margin: 8px 0;
-      color: #0077b6;
+      margin: 0.5rem 0;
+      color: #4e4376;
       text-decoration: none;
-    }
-    .contact a:hover {
-      text-decoration: underline;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="profile.jpg" alt="Dr. Muzafar Soomro">
+    <img src="profile.jpg" alt="Profile Picture" />
     <h1>Dr. Muzafar Soomro</h1>
-    <p>MBBS Graduate - 2025 | Chandka Medical College, SMMBMU Larkana</p>
-  </header>  <section class="about">
-    <h2>About Me</h2>
-    <p>I’m a medical doctor passionate about internal medicine, reflection, and continuous learning. I enjoy sharing knowledge and exploring new frontiers in productivity and AI.</p>
-  </section>  <section class="interests">
+    <p>MBBS - Graduated in 2025<br />Chandka Medical College - SMBBMU Larkana</p>
+  </header>  <section>
     <h2>My Interests</h2>
-    <p><strong>Cricket:</strong> Big fan of the Pakistan cricket team and Babar Azam.</p>
-    <p><strong>Medicine:</strong> Focused on building a career in internal medicine.</p>
-    <p><strong>Self Reflection:</strong> I reflect on my journey, growth, and mindset, often through writing and thought journaling.</p>
-  </section>  <section class="digital">
+    <div class="bubble-container">
+      <div class="bubble">Pakistan Cricket Team Fan</div>
+      <div class="bubble">Internal Medicine</div>
+      <div class="bubble">Self Reflection</div>
+    </div>
+  </section>  <section>
     <h2>Digital Learning</h2>
-    <p>I’m always learning about productivity, modern design, and especially the role of AI. I believe digital tools and innovation are essential for the future of healthcare.</p>
-  </section>  <section class="gallery">
+    <p>I keep exploring new tools and ideas in design, productivity, and especially Artificial Intelligence. These interests aren't just hobbies — they're becoming increasingly essential in modern healthcare and medical education.</p>
+  </section>  <section>
     <h2>Gallery</h2>
     <div class="carousel">
-      <img src="college1.jpg" alt="College Day 1">
-      <img src="college2.jpg" alt="College Day 2">
-      <img src="studytable.jpg" alt="Study Table">
-      <img src="friends.jpg" alt="Friends">
-      <img src="nature.jpg" alt="Nature Calmness">
+      <img src="collage1.jpg" alt="College Photo 1" />
+      <img src="collage2.jpg" alt="College Photo 2" />
+      <img src="friends.jpg" alt="Friends" />
+      <img src="studytable.jpg" alt="Study Table" />
+      <img src="nature.jpg" alt="Nature" />
     </div>
-  </section>  <section class="contact">
+  </section>  <section>
     <h2>Contact Me</h2>
-    <a href="mailto:farazmuzafar786@gmail.com">farazmuzafar786@gmail.com</a>
-    <a href="https://www.linkedin.com/in/muzafar-soomro-b66252308" target="_blank">LinkedIn</a>
-    <a href="https://www.instagram.com/farazmuzafar" target="_blank">Instagram</a>
-    <a href="https://www.facebook.com/share/16TYpfxWe2/" target="_blank">Facebook</a>
-    <a href="https://x.com/muzafar_faraz" target="_blank">Twitter</a>
+    <div class="contact-links">
+      <a href="mailto:farazmuzafar786@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/muzafar-soomro-b66252308">LinkedIn</a>
+      <a href="https://www.instagram.com/farazmuzafar">Instagram</a>
+      <a href="https://www.facebook.com/share/16TYpfxWe2/">Facebook</a>
+      <a href="https://x.com/muzafar_faraz">Twitter</a>
+    </div>
   </section>
 </body>
 </html>
