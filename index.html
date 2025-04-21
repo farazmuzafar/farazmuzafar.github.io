@@ -1,110 +1,50 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muzafar Soomro</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }body {
-  background-color: #f5f7fa;
-  color: #333;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.dark-mode {
-  background-color: #121212;
-  color: #eee;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.hero {
-  text-align: center;
-  padding: 3rem 1rem;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  color: #666;
-}
-
-.about, .blog-preview {
-  margin-top: 3rem;
-}
-
-.about h2, .blog-preview h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.blog-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  margin-bottom: 1rem;
-  transition: transform 0.2s;
-}
-
-.blog-card:hover {
-  transform: scale(1.02);
-}
-
-.toggle-btn {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border: none;
-  background-color: #333;
-  color: white;
-  border-radius: 5px;
-  z-index: 100;
-}
-
-.dark-mode .blog-card {
-  background: #1e1e1e;
-}
-
-  </style>
-</head><body>
-  <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>  <div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muzafar Soomro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
+    <header>
+        <h1>Muzafar Soomro</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
     <section class="hero">
-      <h1>Hi, I'm Muzafar Soomro</h1>
-      <p>Doctor | Learner | Blogger | Dreamer</p>
-    </section><section class="about">
-  <h2>About Me</h2>
-  <p>
-    I'm an MBBS graduate with a deep interest in internal medicine. I enjoy reflecting on life,
-    learning new things, and sharing my thoughts. This site is my personal space to blog, grow, and connect.
-  </p>
-</section>
-
-<section class="blog-preview">
-  <h2>Latest Blog Posts</h2>
-  <div class="blog-card">
-    <h3>Coming Soon: My FCPS & MRCP Journey</h3>
-    <p>A detailed breakdown of my post-MBBS plans, challenges, and what I'm learning along the way.</p>
-  </div>
-</section>
-
-  </div>  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script></body></html>
+        <h1>Hi, I'm Muzafar Soomro</h1>
+        <p>Doctor | Learner | Blogger | Dreamer</p>
+    </section>
+    <section class="about">
+        <h2>About Me</h2>
+        <p>I’m an MBBS graduate interested in internal medicine. This site is a reflection of my journey.</p>
+    </section>
+    <section class="blog-preview">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog-card">
+            <h3>Coming Soon: My FCPS & MRCP Journey</h3>
+            <p>Insights from my experience, challenges, and learning curve.</p>
+        </div>
+    </section>
+    <section class="contact">
+        <h2>Contact</h2>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
