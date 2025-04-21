@@ -1,109 +1,110 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muzafar Soomro | Personal Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>Muzafar Soomro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-light: #ffffff;
-      --text-light: #1a1a1a;
-      --bg-dark: #1a1a1a;
-      --text-dark: #ffffff;
-      --accent: #4f46e5;
-    }
-
-    [data-theme="light"] {
-      background-color: var(--bg-light);
-      color: var(--text-light);
-    }
-
-    [data-theme="dark"] {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      transition: background-color 0.3s, color 0.3s;
-    }
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }body {
+  background-color: #f5f7fa;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-    header {
-      padding: 2rem;
-      text-align: center;
-    }
+.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
 
-    header h1 {
-      margin-bottom: 0.5rem;
-      font-size: 2.5rem;
-    }
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
-    header p {
-      font-size: 1.2rem;
-      color: var(--accent);
-    }
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
 
-    section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
-    h2 {
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.5rem;
-    }
+.hero p {
+  font-size: 1.2rem;
+  color: #666;
+}
 
-    .blog-post {
-      margin-bottom: 1.5rem;
-    }
+.about, .blog-preview {
+  margin-top: 3rem;
+}
 
-    .theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      padding: 0.5rem 1rem;
-      border: none;
-      background-color: var(--accent);
-      color: white;
-      cursor: pointer;
-      border-radius: 0.4rem;
-    }
+.about h2, .blog-preview h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+}
+
+.blog-card:hover {
+  transform: scale(1.02);
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+.dark-mode .blog-card {
+  background: #1e1e1e;
+}
+
   </style>
-</head>
-<body>
-  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+</head><body>
+  <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>  <div class="container">
+    <section class="hero">
+      <h1>Hi, I'm Muzafar Soomro</h1>
+      <p>Doctor | Learner | Blogger | Dreamer</p>
+    </section><section class="about">
+  <h2>About Me</h2>
+  <p>
+    I'm an MBBS graduate with a deep interest in internal medicine. I enjoy reflecting on life,
+    learning new things, and sharing my thoughts. This site is my personal space to blog, grow, and connect.
+  </p>
+</section>
 
-  <header>
-    <h1>Muzafar Soomro</h1>
-    <p>Doctor | Blogger | Explorer of Self & Science</p>
-  </header>
+<section class="blog-preview">
+  <h2>Latest Blog Posts</h2>
+  <div class="blog-card">
+    <h3>Coming Soon: My FCPS & MRCP Journey</h3>
+    <p>A detailed breakdown of my post-MBBS plans, challenges, and what I'm learning along the way.</p>
+  </div>
+</section>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I'm Muzafar Soomro, a doctor with a passion for medicine, self-reflection, and meaningful living. This website is a space where I share my personal thoughts, experiences from the world of healthcare, and reflections on the journey of growth.
-    </p>
-  </section>
-
-  <section>
-    <h2>My Blog</h2>
-    <div class="blog-post">
-      <h3>Coming Soon...</h3>
-      <p>I'll be sharing insightful posts about medicine, self-awareness, and reflections from my journey. Stay tuned!</p>
-    </div>
-  </section>
-
-  <script>
+  </div>  <script>
     function toggleTheme() {
-      const html = document.documentElement;
-      const currentTheme = html.getAttribute('data-theme');
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      html.setAttribute('data-theme', newTheme);
+      document.body.classList.toggle('dark-mode');
     }
-  </script>
-</body>
-</html>
+  </script></body></html>
